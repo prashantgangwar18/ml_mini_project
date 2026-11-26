@@ -1,0 +1,83 @@
+{
+  "trained_at": "2026-11-26T09:24:24.125253+00:00",
+  "dataset": {
+    "total_samples": 41175,
+    "total_trips": 900,
+    "train_samples": 28884,
+    "val_samples": 6177,
+    "test_samples": 6114,
+    "class_distribution": {
+      "On Time": 3336,
+      "Slightly Late": 6672,
+      "Late": 31167
+    }
+  },
+  "toa_models": {
+    "heuristic_baseline": {
+      "mae_min": 7.515,
+      "rmse_min": 12.58,
+      "r2": 0.5146
+    },
+    "ridge_regression": {
+      "mae_min": 3.364,
+      "rmse_min": 4.542,
+      "r2": 0.9367
+    },
+    "lightgbm_toa": {
+      "mae_min": 1.837,
+      "rmse_min": 2.73,
+      "r2": 0.9771
+    }
+  },
+  "delay_regression": {
+    "mae_min": 1.924,
+    "rmse_min": 2.772,
+    "r2": 0.9571
+  },
+  "late_classification": {
+    "accuracy": 0.9236,
+    "macro_f1": 0.8415
+  },
+  "feature_importance": [
+    {
+      "feature": "occupancy_pct",
+      "importance": 16.99
+    },
+    {
+      "feature": "remaining_route_km",
+      "importance": 12.6
+    },
+    {
+      "feature": "progress_ratio",
+      "importance": 9.76
+    },
+    {
+      "feature": "weather_code",
+      "importance": 7.44
+    },
+    {
+      "feature": "schedule_deviation_so_far_min",
+      "importance": 6.15
+    },
+    {
+      "feature": "hour_sin",
+      "importance": 6.06
+    },
+    {
+      "feature": "day_of_week",
+      "importance": 5.55
+    },
+    {
+      "feature": "route_id",
+      "importance": 5.33
+    },
+    {
+      "feature": "rolling_speed_kmh",
+      "importance": 5.12
+    },
+    {
+      "feature": "haversine_to_stop_km",
+      "importance": 4.78
+    }
+  ]
+}
